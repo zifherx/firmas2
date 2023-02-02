@@ -8,9 +8,9 @@ import { fileURLToPath, URL } from "node:url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: process.env.NODE_ENV === 'production' ? '/firmasdigitales' : '/',
+    // base: process.env.NODE_ENV === 'production' ? '/firmasdigitales' : '/',
     // base: process.env.NODE_ENV === "production" ? "./" : "/",
-    // base: '/',
+    base: '/firmas-autonort/',
     plugins: [
         vue({
             template: {
