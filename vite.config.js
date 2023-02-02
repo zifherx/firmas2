@@ -10,7 +10,8 @@ import { fileURLToPath, URL } from "node:url";
 export default defineConfig({
     // base: process.env.NODE_ENV === 'production' ? '/firmasdigitales' : '/',
     // base: process.env.NODE_ENV === "production" ? "./" : "/",
-    base: '/firmas-autonort/',
+    // base: '/firmas-autonort/',
+    base: '/',
     plugins: [
         vue({
             template: {
