@@ -9,9 +9,8 @@ import { fileURLToPath, URL } from "node:url";
 // https://vitejs.dev/config/
 export default defineConfig({
     // base: process.env.NODE_ENV === 'production' ? '/firmasdigitales' : '/',
-    // base: process.env.NODE_ENV === "production" ? "./" : "/",
-    // base: '/firmas-autonort/',
-    base: '/',
+    base: '/firmas-autonort/',
+    // base: '/',
     plugins: [
         vue({
             template: {
@@ -21,6 +20,7 @@ export default defineConfig({
         // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
         vuetify({
             autoImport: true,
+            styles: true
         }),
     ],
     build: {
