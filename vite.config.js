@@ -22,7 +22,6 @@ export default defineConfig({
             autoImport: true,
         }),
     ],
-    assetsInclude: ['**/*.png', '**/*.jpeg'],
     build: {
         rollupOptions: {
             output: {
