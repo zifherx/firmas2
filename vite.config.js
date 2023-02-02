@@ -24,7 +24,6 @@ export default defineConfig({
     ],
     assetsInclude: ['**/*.png', '**/*.jpeg'],
     build: {
-        sourcemap: false,
         rollupOptions: {
             output: {
                 chunkFileNames: "assets/js/[name]-[hash].js",
@@ -59,6 +58,5 @@ export default defineConfig({
     },
     preview: {
         port: 8080,
-        cors: true
     }
 });
