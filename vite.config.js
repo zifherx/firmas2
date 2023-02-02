@@ -25,21 +25,21 @@ export default defineConfig({
     build: {
         rollupOptions: {
             output: {
-                chunkFileNames: "assets/js/[name]-[hash].js",
-                entryFileNames: "assets/js/[name]-[hash].js",
+                chunkFileNames: "assets/js/[name].js",
+                entryFileNames: "assets/js/[name].js",
 
                 assetFileNames: ( {name} ) => {
                     if (/\.(gif|jpeg|png|svg)$/.test(name ?? "")) {
-                        return "assets/images/[name]-[hash][extname]";
+                        return "assets/images/[name][extname]";
                     }
 
                     if (/\.css$/.test(name ?? "")) {
-                        return "assets/css/[name]-[hash][extname]";
+                        return "assets/css/[name][extname]";
                     }
 
                     // default value
                     // ref: https://rollupjs.org/guide/en/#outputassetfilenames
-                    return "assets/[name]-[hash][extname]";
+                    return "assets/[name][extname]";
                 },
             },
         },
@@ -48,7 +48,6 @@ export default defineConfig({
     resolve: {
         alias: {
             "@": fileURLToPath(new URL("./src", import.meta.url)),
-            "@assets": fileURLToPath(new URL("./src/assets", import.meta.url)),
         },
         extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
     },
